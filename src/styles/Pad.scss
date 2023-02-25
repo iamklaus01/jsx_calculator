@@ -1,0 +1,36 @@
+$pads:
+    "clear" 1 1 1 3 orange,
+    "add" 1 1 3 3 #808588,
+    "subtract" 1 1 4 4 #808588,
+    "seven" 2 2 1 1 #363636,
+    "eight" 2 2 2 2 #363636,
+    "nine" 2 2 3 3 #363636,
+    "multiply" 2 2 4 4 #808588,
+    "four" 3 3 1 1 #363636,
+    "five" 3 3 2 2 #363636,
+    "six" 3 3 3 3 #363636,
+    "divide" 3 3 4 4 #808588,
+    "one" 4 4 1 1 #363636,
+    "two" 4 4 2 2 #363636,
+    "three" 4 4 3 3 #363636,
+    "equals" 4 6 4 4 #5DBB63,
+    "zero" 5 5 1 3 #363636,
+    "decimal" 5 5 3 3 #363636;
+
+@each $class, $gr-start, $gr-end, $gc-start, $gc-end, $bg-color in $pads {
+  .#{$class} {
+    grid-column-start: $gc-start;
+    grid-column-end: $gc-end;
+    grid-row-start: $gr-start;
+    grid-row-end: $gr-end;
+    background-color: $bg-color;
+    color: white;
+    text-align:center;
+    padding: 1rem 0;
+    cursor:pointer;
+  }
+  .#{$class}:active {
+    background-color: #318ce7;
+    transform: translateY(1px);
+  }
+}
